@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Young+Serif&display=swap');
+body{
+    margin: 0;
+    font-family:"Rubic",sans-serif;
+    background-color: #111;
+   
+}
+*{
+   box-sizing: border-box; 
+}
+h1,h3{
+    font-weight: 400;
+}
+.weather-app{
+    min-height: 100vh;
+    background-image: url("./imges/day/sampledaycloud.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: #fff;
+    position: relative;
+    transition: 500ms;
+    opacity: 1;
+
+}
+.weather-::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+
+
+}
+.container{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2em 3em 4em 3em;
+}
+.container > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.city-time,.temp,.weather{
+    margin:0 1em ;
+    font-size: larger;
+    font-family: 'Caprasimo', cursive;
+    font-family: 'Young Serif', serif;
+}
+.brand{
+    font-family: Young serif;
+}
+.city-time h1{
+    margin: 0;
+    margin-bottom: 0.2em;
+    font-size: 4em;
+    font-family: 'Caprasimo', cursive;
+    font-family: 'Young Serif', serif;
+}
+.temp{
+    font-size: 8em;
+    margin: 0;
+}
+.weather img{
+    display: block;
+    margin: 0.5em 0;
+}
+.panel{
+    position: absolute;
+    width: 020%;
+    height: 100%;
+    border-radius: 25px;
+    
+    top:0;
+    right:0;
+    background: rgba(110, 110, 110,0.15);
+    box-shadow: 0 8px 32px 18px rgba(14, 117, 131, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    z-index: 1;
+    padding: 2em 2em;
+    overflow-y: hidden;
+
+
+
+}
+
+
+.panel form{
+    margin-bottom: 3em;
+    
+} 
+.submit{
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    padding: 0.9em;
+    margin: 0;
+    border-radius: 100%;
+    outline: none;
+    background: #fa6d1b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: 0.4s;
+
+
+}
+.submit:hover{
+    background: #fff !important;
+    color: #000;
+
+}
+.search{
+    background: white;
+    border-radius: 20px;
+    border: 1px #ccc solid;
+    padding: 10px;
+    width: 80%;
+    color:rgb(164, 149, 149);
+    font-size: 1.1 em;
+    
+
+}
+.search:hover{
+    color: #080404;
+    font-family: 'Caprasimo', cursive;
+    font-family: 'Young Serif', serif;
+}
+
+.search:focus{
+    outline: none;
+}
+.search::placeholder{
+    color: #000000;
+    font-family: 'Caprasimo', cursive;
+    font-family: 'Young Serif', serif;
+}
+.panel ul{
+    padding: 0 0 1em 0;
+    margin: 2em 0;
+    border-bottom: 1px #ccc solid;
+}
+
+.panel ul li{
+    color: #ffffff;
+    font-size:18px;
+    margin: 2.5em 0;
+}
+
+.panel ul h4{
+    margin: 0em 0;
+    font-size:larger;
+    font-family: 'Caprasimo', cursive;
+    font-family: 'Young Serif', serif;
+    color: #312121;
+}
+
+.city{
+    display: block;
+    cursor: pointer;
+}
+.city:hover{
+    color: #fff;
+}
+
+.details li{
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/*For the responsiveness on other devices*/
+
+@media screen and (max-width:800px){
+    .panel,.container{
+        position: relative;
+        width: 100%;
+        top: initial;
+    }
+}
+@media screen and (max-width:500px){
+    html{
+        font-size: 12px;
+    }
+    .city-time h1{
+        
+        font-size: 2em;
+        
+    }
+    .temp{
+        font-size: 5em;
+        
+    }
+}
+@media screen and (max-height:300px){
+    .weather-app{
+        min-height: 40em;
+    }
+}
